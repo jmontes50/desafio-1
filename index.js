@@ -19,6 +19,10 @@ export class ProductManager {
   }
 
   addProduct({ title, description, price, thumbnail, code, stock }) {
+    if (!title || !description || !price || !thumbnail || !code || !stock) {
+      console.log("Faltan datos");
+      return;
+    }
     if (this.#productExists(code)) {
       console.log("El producto ya existe")
       return;

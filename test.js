@@ -38,6 +38,12 @@ const product3 = {
 
 productManager.addProduct(product3);
 
+const product4 = {
+    title: "Producto prueba 2",
+}
+
+productManager.addProduct(product4);
+
 console.log({ products });
 
 const productSearched = productManager.getProductById(1);
